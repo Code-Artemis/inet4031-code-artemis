@@ -1,11 +1,25 @@
-# Week 4: Docker Compose Stack
+# Week 4, Docker Compose with PostgreSQL
 
-Flask app and Postgres database run together with Docker Compose.
+## What this does
+Runs the incident tracker and a PostgreSQL database as a two-service Compose stack, with data persisted in a named volume.
+
+## Requirements
+- Docker Compose
+- A `.env` file in `week-4/` (copy `.env.example` and fill in real values)
 
 ## Run it
+```
+docker compose up -d --build
+```
 
-1. Copy `.env.example` to `.env` and fill in real values.
-2. From `week-4/`, run `docker compose up -d --build`.
-3. Open http://localhost:8080.
+## Verify
+```
+docker compose ps
+```
+Or visit http://localhost:8080 in a browser.
 
-The database data lives in the `db-data` volume, so it survives `docker compose down`.
+## Stop it
+```
+docker compose down
+```
+Add `-v` only if you want to delete the database volume along with the containers.
