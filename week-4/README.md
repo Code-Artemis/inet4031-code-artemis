@@ -8,8 +8,9 @@ Runs the incident tracker and a PostgreSQL database as a two-service Compose sta
 - A `.env` file in `week-4/` (copy `.env.example` and fill in real values)
 
 ## Run it
+Compose is stopped, and Kubernetes (k3s) is now how this app actually runs.
 ```
-docker compose up -d --build
+kubectl apply -f .
 ```
 
 ## Verify
