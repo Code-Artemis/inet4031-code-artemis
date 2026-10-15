@@ -1,3 +1,7 @@
 week-3/app/.env
 week-3/app/.env
 week-4/.env
+week-5/terraform.tfvars
+week-5/*.tfstate
+week-5/*.tfstate.*
+week-5/.terraform/
