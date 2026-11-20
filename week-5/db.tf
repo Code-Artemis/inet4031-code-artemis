@@ -43,6 +43,10 @@ resource "kubernetes_deployment_v1" "db" {
         container {
           name  = "db"
           image = "postgres:16"
+          security_context {
+            run_as_user  = "999"
+            run_as_group = "999"
+          }
 
           port {
             container_port = 5432
